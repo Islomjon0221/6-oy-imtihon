@@ -48,8 +48,9 @@ function Home() {
               let x = res.attributes.price
               const y = x.toString().split('').slice(0, -2).join('')
               const newNum = Number(y)
+              let url = `https://react-vite-comfy-store-v2.netlify.app/products/${res.id}`
             return(
-              <a key={i} href="/products" className="card">
+              <a key={i} href={url} className="card">
                 <img width="320" height='192' src={res.attributes.image} alt="" />
                 <h3 className="card-h3">{res.attributes.title}</h3>
               <p className="card-p">${newNum}.99</p>
